@@ -1,8 +1,5 @@
 ## Seed code - Boilerplate for step 5 - KeepNote Assignment
 
-## Don't submit your solution for this step in hobbes for evaluation
-## Once done with the coding, please share it with your mentor for manual review
-
 ### Assignment Step Description
 
 In this case study KeepNote Step 5, we will implement REST-based MicroServices with Spring Boot.
