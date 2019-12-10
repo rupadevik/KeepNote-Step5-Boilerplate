@@ -39,7 +39,7 @@ public class NoteController {
 	 * 1. 200(OK) - If the note deleted successfully from database. 
 	 * 2. 404(NOT FOUND) - If the note with specified noteId is not found.
 	 *
-	 * This handler method should map to the URL "/api/v1/note/{id}" using HTTP Delete
+	 * This handler method should map to the URL "/api/v1/note/{userId}/{noteId}" using HTTP Delete
 	 * method" where "id" should be replaced by a valid noteId without {}
 	 */
 
@@ -52,7 +52,7 @@ public class NoteController {
 	 * 1. 200(OK) - If the note updated successfully.
 	 * 2. 404(NOT FOUND) - If the note with specified noteId is not found.
 	 * 
-	 * This handler method should map to the URL "/api/v1/note/{id}" using HTTP PUT method.
+	 * This handler method should map to the URL "/api/v1/note/{userId}/{noteId}" using HTTP PUT method.
 	 */
 	
 	/*
@@ -61,7 +61,7 @@ public class NoteController {
 	 * different situations: 
 	 * 1. 200(OK) - If the note found successfully. 
 	 * 
-	 * This handler method should map to the URL "/api/v1/note" using HTTP GET method
+	 * This handler method should map to the URL "/api/v1/note/{userId}" using HTTP GET method
 	 */
 	
 	/*
