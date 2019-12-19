@@ -2,6 +2,8 @@ package com.stackroute.keepnote.model;
 
 import java.util.Date;
 
+import org.springframework.data.annotation.Id;
+
 public class Reminder {
 	
 	/*
@@ -13,11 +15,12 @@ public class Reminder {
 	 * be accepted from the user but should be always initialized with the system
 	 * date.
 	 */
-	private String reminderId; 
-	private String reminderName; 
-	private String reminderDescription; 
-	private String reminderType; 
-	private String reminderCreatedBy; 
+	
+	private String reminderId;
+	private String reminderName;
+	private String reminderDescription;
+	private String reminderType;
+	private String reminderCreatedBy;
 	private Date reminderCreationDate;
 	public String getReminderId() {
 		return reminderId;
@@ -54,8 +57,6 @@ public class Reminder {
 	}
 	public void setReminderCreationDate(Date reminderCreationDate) {
 		this.reminderCreationDate = reminderCreationDate;
-	} 
-	
-	  
+	}
 
 }

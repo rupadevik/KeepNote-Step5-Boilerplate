@@ -65,8 +65,8 @@ public class NoteRepositoryTest {
         note.setNoteContent("Mumbai Indians vs RCB match scheduled  for 4 PM");
         note.setNoteStatus("Active");
         note.setCategory(category);
-        note.setReminder(reminderList);
-        note.setCreatedBy("Jhon123");
+        note.setReminders(reminderList);
+        note.setNoteCreatedBy("Jhon123");
         note.setNoteCreationDate(new Date());
 
         noteList = new ArrayList<>();

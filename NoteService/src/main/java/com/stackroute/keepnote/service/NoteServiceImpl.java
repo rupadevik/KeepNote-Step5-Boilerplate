@@ -50,7 +50,7 @@ public class NoteServiceImpl implements NoteService{
 		List<Note> noteList = new ArrayList<>();
 		noteList.add(note);
 		NoteUser noteuser = new NoteUser();
-		noteuser.setUserId(note.getCreatedBy());
+		noteuser.setUserId(note.getNoteCreatedBy());
 		noteuser.setNotes(noteList);
 		
 		NoteUser noteUser =  noteRepository.insert(noteuser);
@@ -89,7 +89,7 @@ public class NoteServiceImpl implements NoteService{
 			List<Note> filteredNotes = new ArrayList<>();
 			List<Note>   notes = noteUser.getNotes();
 			notes.forEach(note-> {
-				if(!note.getCreatedBy().equals(userId))
+				if(!note.getNoteCreatedBy().equals(userId))
 				{
 					filteredNotes.add(note);
 				}
