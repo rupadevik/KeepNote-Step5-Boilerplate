@@ -77,8 +77,8 @@ public class NoteServiceImplTest {
         note.setNoteContent("Mumbai Indians vs RCB match scheduled  for 4 PM");
         note.setNoteStatus("Active");
         note.setCategory(category);
-        note.setReminders(reminderList);
-        note.setNoteCreatedBy("Jhon123");
+        note.setReminder(reminderList);
+        note.setCreatedBy("Jhon123");
         note.setNoteCreationDate(new Date());
 
         noteList = new ArrayList<>();
@@ -153,7 +153,7 @@ public class NoteServiceImplTest {
         when(noteRepository.findById("Jhon123")).thenReturn(options);
         note.setNoteContent("Match cancelled");
         noteList.add(note);
-        Note fetchedNote = noteServiceImpl.updateNote(note, note.getNoteId(), note.getNoteCreatedBy());
+        Note fetchedNote = noteServiceImpl.updateNote(note, note.getNoteId(), note.getCreatedBy());
         Assert.assertEquals(note, fetchedNote);
 
 
@@ -165,7 +165,7 @@ public class NoteServiceImplTest {
         when(noteRepository.findById("Jhon123")).thenThrow(NoSuchElementException.class);
         note.setNoteContent("Match cancelled");
         noteList.add(note);
-        Note fetchedNote = noteServiceImpl.updateNote(note, note.getNoteId(), note.getNoteCreatedBy());
+        Note fetchedNote = noteServiceImpl.updateNote(note, note.getNoteId(), note.getCreatedBy());
         Assert.assertEquals(note, fetchedNote);
 
 
